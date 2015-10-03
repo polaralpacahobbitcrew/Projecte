@@ -4,6 +4,7 @@ public class Pene {
 	private int longitud;
 	private int ancho;
 	private String color;
+	 //como putas cabras
 	private boolean circuncidado;
 	
 	public int getLongitud() {
