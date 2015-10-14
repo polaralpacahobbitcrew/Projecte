@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 /*
  * Allergen.java        1.0 23/09/2015
@@ -34,7 +36,15 @@ public class Allergen {
 	}
 	
 	public HashMap<Integer,String> getMap() {
-		//return hashMap
 		return allergens;
+	}
+	
+	public HashMap<Integer,String> getMapIng(ArrayList<Integer> codes) {
+		HashMap<Integer, String> allergIng = new HashMap<Integer, String>();
+		for (int i : codes){
+			String name = allergens.get(i);
+			allergIng.put(i,name);
+		}
+		return allergIng;
 	}
 }

@@ -1,5 +1,6 @@
-
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class Ingredient {
 
@@ -11,10 +12,11 @@ public class Ingredient {
 	private double proteines;
 	private double fat;
 	private double salt;
-	private LinkedList<Allergen> allergens;
+	Allergen a = new Allergen();
+	private HashMap<Integer, String> allergens;
 	
 	public Ingredient(int code, String name, String measuringMethod, double kCal, double carbohydrates,
-			double proteines, double fat, double salt, LinkedList<Allergen> allergens) {
+			double proteines, double fat, double salt, ArrayList<Integer> codes) {
 		this.code = code;
 		this.name = name;
 		this.measuringMethod = measuringMethod;
@@ -23,7 +25,7 @@ public class Ingredient {
 		this.proteines = proteines;
 		this.fat = fat;
 		this.salt = salt;
-		this.allergens = allergens;
+		this.allergens = a.getMapIng(codes);
 	}
 
 	public int getCode() {
@@ -57,23 +59,29 @@ public class Ingredient {
 	public double getSalt() {
 		return salt;
 	}
-
-	public LinkedList<Allergen> getAlergerns() {
-		return allergens;
-	}
 	
-	public boolean verifyAllergen (Allergen queryAllergen){
-		for ( Allergen allergen : allergens ) {
-			if ( allergen.getCode() == queryAllergen.getCode()) {
-					return true;
-			}
+	public void getAllergens(){
+		for (Entry<Integer,String> entry : allergens.entrySet()){
+			System.out.println(entry.getValue());
 		}
-		return false;
 	}
-	
+	//Imprimir llista sencera Allergens
+	/*public void getFullAllergens(){
+		for (Entry<Integer,String> entry : a.getMap().entrySet()){
+			System.out.println("Codi = " + entry.getKey() + " Allergen: " + entry.getValue());
+		}
+	}*/
 	@Override
-	public String toString(){
-		// TO DO :)
-		return "NiggattPeneCrew";  
+	public String toString() {
+		return "Ingredient [code=" + code + ", name=" + name + ", measuringMethod=" + measuringMethod + ", kCal=" + kCal
+				+ ", carbohydrates=" + carbohydrates + ", proteines=" + proteines + ", fat=" + fat + ", salt=" + salt
+				+ ", allergens=" + allergens + "]";
 	}
+
+	
+	public void verifyAllergen (int i){
+			if ( allergens.containsKey(i)) System.out.println("L'allergen code " + i + " is found");
+			else System.out.println("L'allergen code " + i + " is not found");
+	}
+
 }
