@@ -30,7 +30,7 @@ public class Ingredient {
 	private HashMap<Integer, String> allergens;
 	
 	public Ingredient(int code, String name, String measuringMethod, double kCal, double carbohydrates,
-			double proteines, double fat, double salt, ArrayList<Integer> codes) {
+		double proteines, double fat, double salt, ArrayList<Integer> codes) {
 		this.code = code;
 		this.name = name;
 		this.measuringMethod = measuringMethod;
@@ -97,4 +97,7 @@ public class Ingredient {
 			if ( allergens.containsKey(i)) System.out.println("L'allergen code " + i + " is found");
 			else System.out.println("L'allergen code " + i + " is not found");
 	}
+	
+	//EQUALS I HASHCODE
+
 }
