@@ -1,3 +1,17 @@
+
+/*
+ * Ingredient.java
+ *
+ * Class that defines an ingredient.
+ *
+ * Copyright 2015 	Miquel Luque <mikialpaca@mail.com>
+ * 					Carlos Mateos <kizors@vayanombre.com>
+ * 					Chema García-Arias García-Morato <josemgagm@gmail.com>
+ *
+ * This is free software, licensed under the GNU General Public License v3.
+ * See http://www.gnu.org/licenses/gpl.html for more information.
+ */
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -83,5 +97,4 @@ public class Ingredient {
 			if ( allergens.containsKey(i)) System.out.println("L'allergen code " + i + " is found");
 			else System.out.println("L'allergen code " + i + " is not found");
 	}
-
 }
