@@ -28,5 +28,4 @@ public class TUI {
 		milk.verifyAllergen(1);
 		milk.verifyAllergen(5);
 	}
-
 }
