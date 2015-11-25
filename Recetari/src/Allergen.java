@@ -4,7 +4,7 @@
  *
  * Class that defines an allergen.
  *
- * Copyright 2015 	Miquel Luque <mikialpaca@mail.com>
+ * Copyright 2015 	Miquel Luque <miquel.luque.rodriguez@gmail.com>
  * 					Carlos Mateos <kizors@vayanombre.com>
  * 					Chema García-Arias García-Morato <josemgagm@gmail.com>
  *

@@ -4,7 +4,7 @@
  *
  * Class that defines an ingredient.
  *
- * Copyright 2015 	Miquel Luque <mikialpaca@mail.com>
+ * Copyright 2015 	Miquel Luque <miquel.luque.rodriguez@gmail.com>
  * 					Carlos Mateos <kizors@vayanombre.com>
  * 					Chema García-Arias García-Morato <josemgagm@gmail.com>
  *
@@ -80,11 +80,11 @@ public class Ingredient {
 		}
 	}
 	//Imprimir llista sencera Allergens
-	/*public void getFullAllergens(){
+	public void getFullAllergens(){
 		for (Entry<Integer,String> entry : a.getMap().entrySet()){
 			System.out.println("Codi = " + entry.getKey() + " Allergen: " + entry.getValue());
 		}
-	}*/
+	}
 	@Override
 	public String toString() {
 		return "Ingredient [code=" + code + ", name=" + name + ", measuringMethod=" + measuringMethod + ", kCal=" + kCal
@@ -97,7 +97,28 @@ public class Ingredient {
 			if ( allergens.containsKey(i)) System.out.println("L'allergen code " + i + " is found");
 			else System.out.println("L'allergen code " + i + " is not found");
 	}
-	
-	//EQUALS I HASHCODE
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + code;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Ingredient other = (Ingredient) obj;
+		if (code != other.code)
+			return false;
+		return true;
+	}
+	
+	
 }
