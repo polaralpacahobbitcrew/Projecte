@@ -12,6 +12,7 @@
  * See http://www.gnu.org/licenses/gpl.html for more information.
  */
 
+import java.util.HashMap;
 
 public class CookingProcedure {
 	HashMap<Integer, String> procedures = new HashMap<Integer, String>();

@@ -14,7 +14,6 @@
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map.Entry;
 
 public class Allergen {
 	HashMap<Integer, String> allergens = new HashMap<Integer, String>();

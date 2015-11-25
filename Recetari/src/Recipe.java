@@ -13,6 +13,8 @@
  */
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Recipe {
 	
@@ -30,7 +32,6 @@ public class Recipe {
 			double salt) {
 		this.code = code;
 		this.name = name;
-		this.quantity = quantity;
 		this.kCal = kCal;
 		this.carbohydrates = carbohydrates;
 		this.proteins = proteins;
