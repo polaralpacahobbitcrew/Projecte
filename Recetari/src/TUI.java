@@ -18,17 +18,22 @@ import java.util.Map.Entry;
 public class TUI {
 
 	public static void main(String[] args) {
-		Allergen a = new Allergen();
-		ArrayList<Integer> code = new ArrayList<Integer>();
-		code.add(1);
-		code.add(2);
-		Ingredient milk = new Ingredient(1, "Milk", "Units", 25.4, 50, 2, 0, 172, code);
-		milk.getAllergens();
-		a.getMap();
-		//Imprimir llista completa d'allergens : milk.getFullAllergens();
-		code.clear();
-		milk.verifyAllergen(1);
-		milk.verifyAllergen(5);
+		try {
+			Allergen a = new Allergen();
+			ArrayList<Integer> code = new ArrayList<Integer>();
+			code.add(1);
+			code.add(2);
+			Ingredient milk = new Ingredient(1, "Milk", "Units", 25.4, 50, 2,
+					0, 172, code);
+			milk.getAllergens();
+			a.getMap();
+			// Imprimir llista completa d'allergens : milk.getFullAllergens();
+			code.clear();
+			milk.verifyAllergen(1);
+			milk.verifyAllergen(5);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

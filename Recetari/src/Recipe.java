@@ -47,9 +47,20 @@ public class Recipe {
 		
 	}
 	
-	/*public void getAllergenList(){
-		for ( Ingredient ing : this.ingredientList ) {
-			
+	public HashSet<Allergen> getAllergenList(){
+		return allergens;
+	}
+	
+	public boolean hasAllergen (Allergen a){
+		for (Allergen aler : allergens){
+			if (aler == a){
+				return true;
+			}
 		}
-	}*/
+		return false;
+	}
+	
+	public void printRecipe (Recipe r){
+		
+	}
 }
