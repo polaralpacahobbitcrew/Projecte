@@ -26,12 +26,14 @@ public class Recipe {
 	private double proteins;
 	private double fat;
 	private double salt;
-	private HashSet<Allergen> allergens;
+	private HashSet<HashSet<String>> allergens;
+	private ArrayList<Integer> quantity;
 	
 	public Recipe(int code, String name, ArrayList<Ingredient> ingredientList, ArrayList<Integer> quantity, double kCal, double carbohydrates, double proteins, double fat, 
 			double salt) {
 		this.code = code;
 		this.name = name;
+		this.quantity = quantity;
 		this.kCal = kCal;
 		this.carbohydrates = carbohydrates;
 		this.proteins = proteins;
@@ -42,19 +44,19 @@ public class Recipe {
 			ListIngredients.put(ingredientList.get(count), quantity.get(i));
 			count++;
 		}
-		for ( Ingredient ing : ListIngredients){
+		for ( Ingredient ing : ingredientList){
 			allergens.add(ing.getAllergens());
 		}
 		
 	}
 	
-	public HashSet<Allergen> getAllergenList(){
+	public HashSet<HashSet<String>> getAllergenList(){
 		return allergens;
 	}
 	
 	public boolean hasAllergen (Allergen a){
-		for (Allergen aler : allergens){
-			if (aler == a){
+		for (HashSet<String> s : allergens){
+			if ( s.contains(a)){
 				return true;
 			}
 		}

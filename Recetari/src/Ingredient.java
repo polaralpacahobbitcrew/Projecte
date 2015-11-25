@@ -14,6 +14,7 @@
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map.Entry;
 
 public class Ingredient {
@@ -74,10 +75,13 @@ public class Ingredient {
 		return salt;
 	}
 	
-	public void getAllergens(){
+	public HashSet<String> getAllergens(){
+		HashSet<String> s = new HashSet<String>();
 		for (Entry<Integer,String> entry : allergens.entrySet()){
-			System.out.println(entry.getValue());
+			//System.out.println(entry.getValue());
+			s.add(entry.getValue());
 		}
+		return s;
 	}
 	//Imprimir llista sencera Allergens
 	public void getFullAllergens(){
