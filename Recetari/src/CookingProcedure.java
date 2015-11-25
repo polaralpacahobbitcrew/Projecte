@@ -22,10 +22,10 @@ public class CookingProcedure {
 		procedures.put(1,"Bake in oven");
 		procedures.put(2,"Boil");
 		procedures.put(3,"Fry");
-		procedures.put(4,"Whip"); //Montar
+		procedures.put(4,"Whip");
 		procedures.put(5,"Heat up");
 		procedures.put(6,"Heat up in microwave oven");
-		procedures.put(7,"Blend"); //Batir
+		procedures.put(7,"Blend");
 		procedures.put(8,"Mix");
 		procedures.put(9,"Fry lightly");
 	}

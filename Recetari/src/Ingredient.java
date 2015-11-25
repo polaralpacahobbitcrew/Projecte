@@ -86,7 +86,7 @@ public class Ingredient {
 	//Imprimir llista sencera Allergens
 	public void getFullAllergens(){
 		for (Entry<Integer,String> entry : a.getMap().entrySet()){
-			System.out.println("Codi = " + entry.getKey() + " Allergen: " + entry.getValue());
+			System.out.println("Code = " + entry.getKey() + " Allergen: " + entry.getValue());
 		}
 	}
 	@Override
@@ -95,11 +95,10 @@ public class Ingredient {
 				+ ", carbohydrates=" + carbohydrates + ", proteines=" + proteines + ", fat=" + fat + ", salt=" + salt
 				+ ", allergens=" + allergens + "]";
 	}
-
 	
 	public void verifyAllergen (int i){
-			if ( allergens.containsKey(i)) System.out.println("L'allergen code " + i + " is found");
-			else System.out.println("L'allergen code " + i + " is not found");
+			if ( allergens.containsKey(i)) System.out.println("The allergen coded " + i + " was found.");
+			else System.out.println("The allergen coded " + i + " was not found");
 	}
 
 	@Override
@@ -123,6 +122,4 @@ public class Ingredient {
 			return false;
 		return true;
 	}
-	
-	
 }

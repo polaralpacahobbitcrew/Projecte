@@ -29,6 +29,7 @@ public class TUI {
 			code.clear();
 			milk.verifyAllergen(1);
 			milk.verifyAllergen(5);
+			System.out.println(milk.getAllergens());
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
